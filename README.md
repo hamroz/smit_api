@@ -1,6 +1,6 @@
-# Insurance Premium Calculation API
+# SMIT Test Work API
 
-This is a FastAPI application that provides endpoints to manage and use tariffs for insurance premium calculation. The tariffs are used to calculate insurance costs based on a given declared value.
+This project is a FastAPI application with a PostgreSQL database. It is Dockerized for easy setup and deployment.
 
 ## Installation
 
@@ -16,10 +16,8 @@ Before you start, ensure you have installed:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/insurance-premium-api.git
+   git clone https://github.com/hamroz/smit-api.git
    ```
-
-   Replace `yourusername` with your actual GitHub username if you've forked this repository to your account.
 
 2. Navigate to the project directory:
 
@@ -27,15 +25,9 @@ Before you start, ensure you have installed:
    cd smit_api
    ```
 
-3. Build the Docker image:
-
+3. Build and Start the Docker container:
    ```bash
-   docker-compose build
-   ```
-
-4. Start the Docker container:
-   ```bash
-   docker-compose up
+   docker-compose up --build
    ```
 
 The FastAPI application should now be up and running at `http://localhost:8000`.

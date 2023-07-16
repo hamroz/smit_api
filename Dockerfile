@@ -1,17 +1,16 @@
-# Use an official Python runtime as a parent image
-FROM python:3.9
+FROM python:3.8
 
-# Set environment varibles
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+WORKDIR /usr/src/app
 
-# Set work directory in the container
-WORKDIR /code
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install dependencies
-COPY requirements.txt /code/
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+# Install netcat-openbsd
+RUN apt-get update && apt-get install -y netcat-openbsd
 
-# Copy project
-COPY . /code/
+COPY . .
+
+COPY wait-for.sh /wait-for.sh
+RUN chmod +x /wait-for.sh
+
+CMD ["/wait-for.sh", "db:5432", "python", "./main.py"]

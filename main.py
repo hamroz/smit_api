@@ -100,7 +100,7 @@ async def delete_tariff(id: int):
 
 register_tortoise(
     app,
-    db_url="postgres://uca_rec_user:Elephant@123@localhost:5432/test",
+    db_url="postgres://uca_rec_user:Elephant@123@db:5432/test",
     modules={"models": ["main"]},
     generate_schemas=True,
     add_exception_handlers=True,
