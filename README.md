@@ -24,7 +24,7 @@ Before you start, ensure you have installed:
 2. Navigate to the project directory:
 
    ```bash
-   cd insurance-premium-api
+   cd smit_api
    ```
 
 3. Build the Docker image:
@@ -58,11 +58,3 @@ Remember to replace `{id}` with the actual ID of the tariff you want to interact
 ## Testing
 
 You can test each endpoint and its functionality directly in the interactive API documentation at `http://localhost:8000/docs`.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
